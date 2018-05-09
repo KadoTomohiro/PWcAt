@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod:ngsw": "ng build --service-worker --prod"
+    "build:prod:ngsw": "ng build --service-worker --prod",
+    "build:prod:ngsw:glpage": "npm run build:prod:ngsw -- --base-href /$CI_PROJECT_NAME/ --output-path public"
   },
   "private": true,
   "dependencies": {

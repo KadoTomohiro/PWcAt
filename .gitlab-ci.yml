@@ -1,0 +1,13 @@
+image: node:
+pages:
+  script:
+    - npm i --no-progress
+    - npm run build:prod:ngsw:glpage
+    - mkdir .public
+    - cp -r dist/* .public
+    - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+    - master
